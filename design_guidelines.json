@@ -1,0 +1,198 @@
+{
+  "brand": {
+    "name": "RK FITNESS",
+    "tagline": "BUILD STRONG. BUILD DIFFERENT.",
+    "location_hub": "Hyderabad, Telangana",
+    "timings": "6:00 AM - 12:00 AM (Mon - Sun)",
+    "aesthetic": "Cyber-Athletic Tactical Minimalism & High-Energy Hardcore Bodybuilding",
+    "prohibited": [
+      "Inter for headings",
+      "Teal or Purple gradients (#7351B7 or #1B93A4)",
+      "Generic corporate soft UI",
+      "Invented member testimonials, fake awards, or fake history claims",
+      "Complete addresses on Homepage location cards (names only on homepage)"
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "primary_accent": "#FFE500",
+    "secondary_accent": "#EAB308",
+    "background_main": "#09090B",
+    "background_card": "#121215",
+    "background_elevated": "#1C1C21",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "text_muted": "#71717A",
+    "border": "#27272A",
+    "border_highlight": "rgba(255, 229, 0, 0.3)"
+  },
+  "typography": {
+    "display_font": "Barlow Condensed, Oswald, sans-serif (900/800 ExtraBold Upper)",
+    "heading_font": "Outfit, Montserrat, sans-serif",
+    "body_font": "DM Sans, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "scale": {
+      "h1": "text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight",
+      "h3": "text-xl sm:text-2xl font-bold uppercase tracking-normal",
+      "body": "text-base leading-relaxed text-zinc-300",
+      "label": "text-xs font-mono uppercase tracking-[0.2em] text-yellow-400"
+    }
+  },
+  "pricing": {
+    "currency": "₹",
+    "plans": [
+      {
+        "id": "day-pass",
+        "name": "Day Pass",
+        "price": "₹200",
+        "billing": "per visit",
+        "badge": null,
+        "features": ["Full facility access for 1 day", "Locker room access", "Cardio & Heavy Strength zone"]
+      },
+      {
+        "id": "monthly",
+        "name": "Monthly",
+        "price": "₹1,800",
+        "billing": "per month",
+        "badge": null,
+        "features": ["Unlimited access", "General trainer assistance", "Locker access", "All training zones"]
+      },
+      {
+        "id": "quarterly",
+        "name": "3 Months",
+        "price": "₹4,500",
+        "billing": "₹1,500/mo equivalent",
+        "badge": "Popular",
+        "features": ["Unlimited access", "Diet guidance framework", "Bi-weekly progress checks", "Locker access"]
+      },
+      {
+        "id": "half-yearly",
+        "name": "6 Months",
+        "price": "₹7,500",
+        "billing": "₹1,250/mo equivalent",
+        "badge": "Great Value",
+        "features": ["Unlimited access", "Customized workout split template", "Diet plan template", "1-on-1 orientation"]
+      },
+      {
+        "id": "yearly",
+        "name": "Yearly",
+        "price": "₹14,000",
+        "billing": "₹1,166/mo equivalent",
+        "badge": "BEST VALUE",
+        "features": ["Unlimited year-round access", "Free body assessment & tracking", "Personal training intro sessions", "Priority branch access", "Locker & Shower access"]
+      }
+    ]
+  },
+  "branches": [
+    {
+      "id": "gudimalkapur",
+      "name": "Gudimalkapur",
+      "slug": "gudimalkapur",
+      "address": "Pillar No. 64, Mehdipatnam - Ring Rd, Gudimalkapur, Hyderabad, Telangana 500028",
+      "phone": "+91 98765 43210",
+      "directions_url": "https://maps.google.com/?q=RK+Fitness+Gudimalkapur+Hyderabad",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.5458!2d78.4350!3d17.3850!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjAiTiA3OMKwMjYnMDYuMCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "features": ["Heavy Strength Zone", "Cardio Deck", "Plate Loaded Machines", "Certified Trainers", "Air Conditioned"]
+    },
+    {
+      "id": "asif-nagar",
+      "name": "Asif Nagar",
+      "slug": "asif-nagar",
+      "address": "Main Road Near Asif Nagar Police Station, Asif Nagar, Hyderabad, Telangana 500028",
+      "phone": "+91 98765 43211",
+      "directions_url": "https://maps.google.com/?q=RK+Fitness+Asif+Nagar+Hyderabad",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.4000!2d78.4450!3d17.3880!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzE2LjgiTiA3OMKwMjYnNDIuMCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+      "image": "https://images.unsplash.com/photo-1590487988256-9ed24133863e?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "features": ["Powerlifting Racks", "Functional Arena", "Personal Training", "Supplements Counter", "Modern Lockers"]
+    },
+    {
+      "id": "mangalhat",
+      "name": "Mangalhat",
+      "slug": "mangalhat",
+      "address": "Near Juma Masjid Cross Roads, Mangalhat, Hyderabad, Telangana 500006",
+      "phone": "+91 98765 43212",
+      "directions_url": "https://maps.google.com/?q=RK+Fitness+Mangalhat+Hyderabad",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6000!2d78.4600!3d17.3750!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIyJzMwLjAiTiA3OMKwMjcnMzYuMCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+      "image": "https://images.unsplash.com/photo-1576678927484-cc907957088c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "features": ["Bodybuilding Specialization", "Dumbbell Rack up to 60kg", "High Capacity Cardio", "Steam & Refreshment Zone"]
+    },
+    {
+      "id": "puranapool",
+      "name": "Puranapool",
+      "slug": "puranapool",
+      "address": "Opposite High Court Gate Rd, Puranapool Bridge Rd, Puranapool, Hyderabad, Telangana 500064",
+      "phone": "+91 98765 43213",
+      "directions_url": "https://maps.google.com/?q=RK+Fitness+Puranapool+Hyderabad",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8000!2d78.4680!3d17.3620!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIxJzQzLjIiTiA3OMKwMjgnMDQuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+      "image": "https://images.unsplash.com/photo-1637430308606-86576d8fef3c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "features": ["Old School Iron & Modern Cable Rigs", "Fat Loss Conditioning", "Flexible Timing", "Group Workout Bay"]
+    },
+    {
+      "id": "afzal-gunj",
+      "name": "Afzal Gunj",
+      "slug": "afzal-gunj",
+      "address": "Central Bus Station Road, Afzal Gunj, Hyderabad, Telangana 500012",
+      "phone": "+91 98765 43214",
+      "directions_url": "https://maps.google.com/?q=RK+Fitness+Afzal+Gunj+Hyderabad",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3500!2d78.4750!3d17.3780!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIyJzQwLjgiTiA3OMKwMjgnMzAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+      "image": "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0",
+      "features": ["State-of-the-art Machines", "Multi-station Racks", "Dedicated PT Zone", "Spacious Floor Plan"]
+    },
+    {
+      "id": "nampally",
+      "name": "Nampally",
+      "slug": "nampally",
+      "address": "Station Road Near Railway Station, Nampally, Hyderabad, Telangana 500001",
+      "phone": "+91 98765 43215",
+      "directions_url": "https://maps.google.com/?q=RK+Fitness+Nampally+Hyderabad",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2000!2d78.4680!3d17.3920!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzMxLjIiTiA3OMKwMjgnMDQuOCJF!5e0!3m2!1sen!2sin!4v1700000000000",
+      "image": "https://images.unsplash.com/photo-1678967633223-050cf8e1c55c",
+      "features": ["Prime Central Location", "Full Hypertrophy Suite", "Hi-Tech Treadmills", "Locker Room & Changing Bays"]
+    }
+  ],
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "section_more_than_gym": "https://images.unsplash.com/photo-1590487988256-9ed24133863e?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "section_why_rk": "https://images.unsplash.com/photo-1576678927484-cc907957088c?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "trainers": [
+      {
+        "url": "https://images.unsplash.com/photo-1754475118668-64ac3f3b2559",
+        "title": "Head Strength & Conditioning Coach",
+        "placeholder": "Senior Trainer Placeholder 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1434847868581-86e8a2b8e7a3",
+        "title": "Female Fitness & Hypertrophy Specialist",
+        "placeholder": "Senior Trainer Placeholder 2"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1744579528653-7aa1180fa436",
+        "title": "Bodybuilding & Contest Prep Coach",
+        "placeholder": "Senior Trainer Placeholder 3"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1626724419913-ac60f768c20f",
+        "title": "Fat Loss & Athletic Conditioning Coach",
+        "placeholder": "Senior Trainer Placeholder 4"
+      }
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1590487988256-9ed24133863e?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1576678927484-cc907957088c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1637430308606-86576d8fef3c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0",
+      "https://images.unsplash.com/photo-1678967633223-050cf8e1c55c"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure React components exist for Homepage and Branch Pages with proper React Router routes (/ and /branch/:slug).",
+    "Keep navbar fixed/sticky with high contrast background (e.g. bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800 z-50). Include mobile hamburger drawer menu.",
+    "On Homepage Locations section, render ONLY branch names and quick 'View Branch' links. Do NOT display full addresses on the homepage grid.",
+    "On Branch pages, display full address, embedded Google Maps iframe, directions link button, demo branch phone number, photo gallery, branch trainers placeholder, services, exact membership pricing, and enquiry CTA modal.",
+    "All form submissions (Contact form and Enquiry Modal) must show a prototype-only success toast/alert ('Enquiry Submitted Successfully!') without needing backend failure.",
+    "Every interactive button, input, link, tab, modal, and branch card MUST include explicit data-testid attributes (e.g. data-testid='hero-cta-button', data-testid='branch-card-gudimalkapur', data-testid='enquiry-form-submit')."
+  ]
+}
