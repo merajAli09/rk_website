@@ -42,6 +42,23 @@ const gymImages = [
   "https://images.unsplash.com/photo-1678967633223-050cf8e1c55c?auto=format&fit=crop&w=1200&q=85",
 ];
 
+const dumbbellRackImages = [
+  "https://images.unsplash.com/photo-1590239926079-ffde4959f91d?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1590239926044-4131f5d0654d?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1590240091983-b3f0df925dc7?auto=format&fit=crop&w=1400&q=85",
+  "https://images.unsplash.com/photo-1646656130630-07af3a262a9b?auto=format&fit=crop&w=1400&q=85",
+];
+
+const branchImageOverrides: Record<string, string> = {
+  guddimalkapur: dumbbellRackImages[0],
+  nampally: dumbbellRackImages[1],
+};
+
+const branchGalleryOverrides: Record<string, string[]> = {
+  guddimalkapur: [dumbbellRackImages[0], dumbbellRackImages[2], dumbbellRackImages[3]],
+  nampally: [dumbbellRackImages[1], dumbbellRackImages[3], dumbbellRackImages[2]],
+};
+
 const standardTimings = ["6:00 AM – 12:00 PM", "4:00 PM – 11:00 PM"];
 
 const branchSeed = [
@@ -102,11 +119,12 @@ const branchSeed = [
 
 export const BRANCHES: Branch[] = branchSeed.map((branch, index) => {
   const links = mapLinks(branch.address);
+  const image = branchImageOverrides[branch.slug] ?? gymImages[index % gymImages.length];
   return {
     ...branch,
     timings: standardTimings,
-    image: gymImages[index % gymImages.length],
-    gallery: [gymImages[index % gymImages.length], gymImages[(index + 1) % gymImages.length], gymImages[(index + 2) % gymImages.length]],
+    image,
+    gallery: branchGalleryOverrides[branch.slug] ?? [image, gymImages[(index + 1) % gymImages.length], gymImages[(index + 2) % gymImages.length]],
     ...links,
   };
 });

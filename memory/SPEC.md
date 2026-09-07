@@ -17,6 +17,7 @@ Premium, mobile-first marketing website for RK FITNESS Hyderabad with a homepage
 - Legacy URLs `/branches/gudimalkapur`, `/branches/afzal-gunj`, and `/branches/puranapool` redirect to the renamed canonical routes.
 - The header is fixed while scrolling and every page provides a bottom-left back-to-top control after scrolling.
 - Branch gallery images open a lightbox. Homepage gallery photography is intentionally withheld until the client supplies the replacement images.
+- Guddimalkapur and Nampally currently use separate, restrained people-free dumbbell-rack images for their cards, heroes, and equipment-only branch galleries.
 
 ## Auth / roles
 No authentication or gated areas.
