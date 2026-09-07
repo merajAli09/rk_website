@@ -375,6 +375,11 @@
 .detail-row a:hover { color: #8b7500; }
 .phone-list { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 9px; }
 .phone-list a { margin-top: 0; }
+.ladies-only-detail { margin-top: 12px; padding: 20px 18px; border: 1px solid #c6ad00; background: #ffe500; }
+.ladies-only-detail > svg { color: #09090b; }
+.ladies-only-detail span { color: #665700; }
+.ladies-only-detail p { margin-bottom: 5px; font-size: 18px; font-weight: 800; }
+.ladies-only-detail strong { display: block; color: #09090b; font: 700 12px/1.4 'JetBrains Mono Variable', monospace; letter-spacing: .05em; text-transform: uppercase; }
 .map-card { background: #09090b; border: 1px solid #27272a; }
 .map-card iframe { display: block; width: 100%; height: 415px; border: 0; filter: grayscale(.3) contrast(1.1); }
 .map-footer { display: flex; justify-content: space-between; gap: 15px; align-items: center; padding: 18px 20px; color: #fff; font: 600 10px/1 'JetBrains Mono Variable', monospace; letter-spacing: .1em; text-transform: uppercase; }

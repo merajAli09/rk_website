@@ -4,6 +4,12 @@ export interface Branch {
   orderLabel: string;
   address: string[];
   phones: string[];
+  timings: string[];
+  ladiesOnly?: {
+    time: string;
+    label: string;
+    trainer: string;
+  };
   image: string;
   gallery: string[];
   features: string[];
@@ -36,6 +42,8 @@ const gymImages = [
   "https://images.unsplash.com/photo-1678967633223-050cf8e1c55c?auto=format&fit=crop&w=1200&q=85",
 ];
 
+const standardTimings = ["6:00 AM – 12:00 PM", "4:00 PM – 11:00 PM"];
+
 const branchSeed = [
   {
     slug: "mangalhat",
@@ -59,6 +67,11 @@ const branchSeed = [
     orderLabel: "Third Branch",
     address: ["Besides Success School,", "H.No 12-1-863/1,", "Sri Damayanthi Chamber,", "Police Station Rd,", "Asif Nagar, Hyderabad,", "Telangana 500006"],
     phones: ["9133911556", "9296050027"],
+    ladiesOnly: {
+      time: "12:00 PM – 4:00 PM",
+      label: "Exclusively for ladies",
+      trainer: "Ladies trainer available during this session",
+    },
     features: ["Functional training", "Power racks", "Cardio floor", "Personal training"],
   },
   {
@@ -91,6 +104,7 @@ export const BRANCHES: Branch[] = branchSeed.map((branch, index) => {
   const links = mapLinks(branch.address);
   return {
     ...branch,
+    timings: standardTimings,
     image: gymImages[index % gymImages.length],
     gallery: [gymImages[index % gymImages.length], gymImages[(index + 1) % gymImages.length], gymImages[(index + 2) % gymImages.length]],
     ...links,
