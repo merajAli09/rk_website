@@ -18,6 +18,7 @@ Premium, mobile-first marketing website for RK FITNESS Hyderabad with a homepage
 - The header is fixed while scrolling and every page provides a bottom-left back-to-top control after scrolling.
 - The supplied official yellow-on-black RK FITNESS logo is displayed in the fixed header, directly left of the text name.
 - An About Owner section follows the six branches and uses the supplied photo of Vikram Singh, his 2005 career start, WFF India association, and listed 2017/2018/2021 titles.
+- The owner photo is shown uncropped so his complete arms and torso remain visible, and the “About Owner” label is intentionally more prominent.
 - Branch subpages retain their hero background but intentionally omit every branch-gallery section until real branch photos are supplied. Homepage gallery photography is also intentionally withheld.
 - Guddimalkapur and Nampally currently use separate, restrained people-free dumbbell-rack images for their cards, heroes, and equipment-only branch galleries.
 - The homepage “Build Strong. Build Different.” hero uses a people-free, medium-view dumbbell-rack photograph.
