@@ -60,6 +60,8 @@ const suppliedGalleryImages = [
   "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/8vdp3q6f_a5407e81-a54b-47c0-8de5-153d3b9b8ae8.JPG",
   "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/nepq286k_b76e8290-aada-43c6-9c61-7669c04670b4.JPG",
   "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/mvwiuetj_b686cd37-a1e2-462a-adf6-e2e420ef054c.JPG",
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/5845uvrx_4a88d7dd-f27c-4218-b9a5-ee359aa1d113.JPG",
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/u1cxhgnt_6e9bfae4-d256-4d36-ba17-34d629acb2c3.JPG",
 ];
 
 const branchGalleryOverrides: Record<string, string[]> = {
@@ -67,8 +69,8 @@ const branchGalleryOverrides: Record<string, string[]> = {
   nampally: [suppliedGalleryImages[1]],
   "begum-bazar": [suppliedGalleryImages[2]],
   "asif-nagar": [suppliedGalleryImages[4]],
-  mangalhat: [],
-  puranapul: [],
+  mangalhat: [suppliedGalleryImages[6]],
+  puranapul: [suppliedGalleryImages[5]],
 };
 
 const standardTimings = ["6:00 AM – 12:00 PM", "4:00 PM – 11:00 PM"];
