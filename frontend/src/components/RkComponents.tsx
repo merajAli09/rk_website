@@ -1,5 +1,5 @@
-import { useState, type ReactNode } from "react";
-import { ArrowUpRight, Menu, Phone, X } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
+import { ArrowUp, ArrowUpRight, Menu, Phone, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BRANCHES } from "@/data/branches";
@@ -58,6 +58,7 @@ export function SectionIntro({ eyebrow, title, copy, align = "left" }: { eyebrow
 }
 
 export function Footer() {
+  const contactNumbers = [...new Set(BRANCHES.flatMap((branch) => branch.phones))];
   return (
     <footer className="site-footer" data-testid="site-footer">
       <div className="footer-top">
@@ -67,7 +68,7 @@ export function Footer() {
         </div>
         <div className="footer-column" data-testid="footer-quick-links"><p className="footer-label">Explore</p><a href="/#about" data-testid="footer-about-link">About</a><a href="/#services" data-testid="footer-services-link">Services</a><a href="/#branches" data-testid="footer-branches-link">Branches</a><a href="/#gallery" data-testid="footer-gallery-link">Gallery</a></div>
         <div className="footer-column" data-testid="footer-branch-links"><p className="footer-label">Branches</p>{BRANCHES.map((branch) => <Link key={branch.slug} to={`/branches/${branch.slug}`} data-testid={`footer-branch-link-${branch.slug}`}>{branch.name}</Link>)}</div>
-        <div className="footer-column footer-contact" data-testid="footer-contact"><p className="footer-label">Contact</p><a href="tel:9998887771" data-testid="footer-phone-link"><Phone /> 9998887771</a><a href="https://instagram.com" target="_blank" rel="noreferrer" data-testid="footer-instagram-link">Instagram <ArrowUpRight /></a><p data-testid="footer-hours">6:00 AM - 12:00 AM<br />Mon - Sun</p></div>
+        <div className="footer-column footer-contact" data-testid="footer-contact"><p className="footer-label">Contact</p>{contactNumbers.map((phone, index) => <a key={phone} href={`tel:${phone}`} data-testid={`footer-phone-link-${index + 1}`}><Phone /> {phone}</a>)}<a href="https://instagram.com" target="_blank" rel="noreferrer" data-testid="footer-instagram-link">Instagram <ArrowUpRight /></a><p data-testid="footer-hours">6:00 AM - 12:00 AM<br />Mon - Sun</p></div>
       </div>
       <div className="footer-bottom"><span data-testid="footer-copyright">© 2026 RK FITNESS. All Rights Reserved.</span><span data-testid="footer-location">Hyderabad, Telangana</span></div>
     </footer>
@@ -75,5 +76,16 @@ export function Footer() {
 }
 
 export function PageShell({ children }: { children: ReactNode }) {
-  return <div className="page-shell" data-testid="page-shell">{children}</div>;
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const updateVisibility = () => setShowBackToTop(window.scrollY > 480);
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+    return () => window.removeEventListener("scroll", updateVisibility);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  return <div className="page-shell" data-testid="page-shell">{children}<button type="button" className={`back-to-top ${showBackToTop ? "back-to-top-visible" : ""}`} onClick={scrollToTop} aria-label="Back to top" data-testid="back-to-top-button"><ArrowUp /></button></div>;
 }

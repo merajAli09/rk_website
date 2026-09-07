@@ -1,8 +1,9 @@
 export interface Branch {
   slug: string;
   name: string;
+  orderLabel: string;
   address: string[];
-  phone: string;
+  phones: string[];
   image: string;
   gallery: string[];
   features: string[];
@@ -37,45 +38,51 @@ const gymImages = [
 
 const branchSeed = [
   {
-    slug: "gudimalkapur",
-    name: "Gudimalkapur",
-    address: ["Beside Kabbadi Stadium,", "Markandeya Nagar, Talla Gadda,", "Gudimalkapur, Hyderabad,", "Telangana 500006"],
-    phone: "9998887771",
-    features: ["Heavy strength zone", "Cardio floor", "Modern equipment", "Trainer assistance"],
+    slug: "mangalhat",
+    name: "Mangalhat",
+    orderLabel: "First Branch",
+    address: ["14-1-187/C,", "Sitarampet,", "Mangalhat, Hyderabad,", "Telangana 500006"],
+    phones: ["9059389888", "9346353933"],
+    features: ["Bodybuilding zone", "Free weights", "Conditioning area", "Trainer assistance"],
+  },
+  {
+    slug: "begum-bazar",
+    name: "Begum Bazar",
+    orderLabel: "Second Branch",
+    address: ["503, 73,", "Above Seven Heaven Hotel,", "Fish Market,", "Begum Bazar,", "Hyderabad, Telangana 500012"],
+    phones: ["9133911556", "9296050027"],
+    features: ["Multi-station racks", "Serious lifting floor", "Dedicated PT zone", "Spacious layout"],
   },
   {
     slug: "asif-nagar",
     name: "Asif Nagar",
+    orderLabel: "Third Branch",
     address: ["Besides Success School,", "H.No 12-1-863/1,", "Sri Damayanthi Chamber,", "Police Station Rd,", "Asif Nagar, Hyderabad,", "Telangana 500006"],
-    phone: "9998887772",
+    phones: ["9133911556", "9296050027"],
     features: ["Functional training", "Power racks", "Cardio floor", "Personal training"],
   },
   {
-    slug: "mangalhat",
-    name: "Mangalhat",
-    address: ["14-1-187/C,", "Sitarampet,", "Mangalhat, Hyderabad,", "Telangana 500006"],
-    phone: "9998887773",
-    features: ["Bodybuilding zone", "Free weights", "Conditioning area", "Trainer assistance"],
-  },
-  {
-    slug: "puranapool",
-    name: "Puranapool",
-    address: ["13-3-389/3/B,", "X Road, Durga Nagar,", "Venkateswara Nagar,", "Puranapool, Hyderabad,", "Telangana 500006"],
-    phone: "9998887774",
+    slug: "puranapul",
+    name: "Puranapul",
+    orderLabel: "Fourth Branch",
+    address: ["13-3-389/3/B,", "X Road, Durga Nagar,", "Venkateswara Nagar,", "Puranapul, Hyderabad,", "Telangana 500006"],
+    phones: ["9059389888", "9346353933"],
     features: ["Strength training", "Cable machines", "Fat loss conditioning", "Workout bay"],
   },
   {
-    slug: "afzal-gunj",
-    name: "Afzal Gunj",
-    address: ["503, 73,", "Above Seven Heaven Hotel,", "Fish Market,", "Begum Bazar, Afzal Gunj,", "Hyderabad, Telangana 500012"],
-    phone: "9998887775",
-    features: ["Multi-station racks", "Serious lifting floor", "Dedicated PT zone", "Spacious layout"],
+    slug: "guddimalkapur",
+    name: "Guddimalkapur",
+    orderLabel: "Fifth Branch",
+    address: ["Beside Kabbadi Stadium,", "Markandeya Nagar, Talla Gadda,", "Guddimalkapur, Hyderabad,", "Telangana 500006"],
+    phones: ["9133911556", "9296050027"],
+    features: ["Heavy strength zone", "Cardio floor", "Modern equipment", "Trainer assistance"],
   },
   {
     slug: "nampally",
     name: "Nampally",
+    orderLabel: "Sixth Branch",
     address: ["Ek Minar Masjid,", "Sri Balaji Enclave,", "Ghosha Mahal,", "Nampally, Hyderabad,", "Telangana 500001"],
-    phone: "9998887776",
+    phones: ["9059389888", "9346353933"],
     features: ["Hypertrophy suite", "Cardio equipment", "Strength floor", "Changing facilities"],
   },
 ];

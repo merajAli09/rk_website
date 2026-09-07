@@ -4,14 +4,16 @@
 Premium, mobile-first marketing website for RK FITNESS Hyderabad with a homepage and reusable branch detail pages for six locations.
 
 ## Data model
-- `frontend/src/data/branches.ts` is the centralized source for branch names, exact addresses, demo phones, photos, features, map embed URLs, and directions URLs.
+- `frontend/src/data/branches.ts` is the centralized source for ordered branch names, exact addresses, two click-to-call phone numbers per branch, photos, features, map embed URLs, and directions URLs.
 - Membership pricing is not displayed anywhere on the website.
 - Enquiry forms and enquiry modals are not displayed anywhere on the website.
 
 ## Key flows
 - Homepage sticky navigation → section anchors → primary CTA scrolls to the six branch choices.
-- Homepage branch cards → `/branches/:slug` reusable branch template.
+- Homepage branch cards are ordered First through Sixth: Mangalhat, Begum Bazar, Asif Nagar, Puranapul, Guddimalkapur, Nampally → `/branches/:slug` reusable branch template.
 - Branch pages reset to the top on navigation and show full address, call link, no-key Google Maps embed/share URL, directions link, services, and photos.
+- Legacy URLs `/branches/gudimalkapur`, `/branches/afzal-gunj`, and `/branches/puranapool` redirect to the renamed canonical routes.
+- The header is fixed while scrolling and every page provides a bottom-left back-to-top control after scrolling.
 - Branch gallery images open a lightbox. Homepage gallery photography is intentionally withheld until the client supplies the replacement images.
 
 ## Auth / roles
