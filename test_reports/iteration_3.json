@@ -1,0 +1,65 @@
+{
+  "iteration": 3,
+  "passed": 12,
+  "failed": 0,
+  "flaky": 0,
+  "blocked": 0,
+  "test_error": 0,
+  "bugs": [],
+  "action_items": [
+    "No API-bearing acceptance criterion exists for this Instagram feature (Instagram URLs are static frontend data per seed_facts); backend pytest suite has no tests to add/run for this matrix.",
+    "Three pre-existing regression checks (branch-cards-routes, branch-details-actions, branch-essentials-usable) referenced stale branch slugs/testids (gudimalkapur/puranapool/afzal-gunj and singular branch-phone-link/branch-call-now-button) from before an earlier slug rename to guddimalkapur/puranapul/begum-bazar. These were not app bugs (the live app used the new slugs correctly) - fixed the check scripts to match current slugs/testids so the regression suite is accurate again."
+  ],
+  "retest_needed": false,
+  "checks": [
+    {
+      "criterion": "Every branch details panel uses the exact supplied Instagram URL",
+      "name": "branch-instagram-links-exact-urls",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "For all 6 branches (guddimalkapur, begum-bazar, asif-nagar, puranapul, nampally, mangalhat), branch-instagram-link href matched the exact supplied URL including stkn query and target=_blank."
+    },
+    {
+      "criterion": "Every branch final CTA area repeats the correct Instagram action",
+      "name": "branch-instagram-links-exact-urls",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Same check also asserted branch-instagram-cta href matches the identical branch-specific URL and target=_blank for all 6 branches; no URL swapping detected."
+    },
+    {
+      "criterion": "Instagram detail content is visually readable",
+      "name": "branch-instagram-mobile-readable",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "On /branches/mangalhat, 'Instagram' label bounding box sits above branch-instagram-link (no vertical overlap), link text contains 'Mangalhat'; screenshot confirms label on its own line with visible spacing above the follow action."
+    },
+    {
+      "criterion": "Branch contact actions remain usable on mobile after adding Instagram",
+      "name": "branch-instagram-mobile-readable",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "At 390x844 on /branches/mangalhat: document.scrollWidth <= clientWidth (no horizontal overflow), branch-phone-link-1 (tel:) and branch-directions-link visible, branch-instagram-cta fully within viewport bounds, branch-call-now-button-1 visible. Screenshots show clean stacked CTA buttons."
+    },
+    {
+      "criterion": "Regression: branch cards route correctly to updated slugs",
+      "name": "branch-cards-routes",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Fixed stale slugs (gudimalkapur/puranapool/afzal-gunj -> guddimalkapur/puranapul/begum-bazar); all 6 branch-view links and branch-hero sections verified."
+    },
+    {
+      "criterion": "Regression: branch detail actions (footer nav, address, phone, hours, map, directions, hero call)",
+      "name": "branch-details-actions",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Fixed stale slugs/testids; verified for all 6 branches after slug/testid correction (branch-phone-link-1, branch-hero-call-button-1)."
+    },
+    {
+      "criterion": "Regression: branch essentials remain usable on mobile",
+      "name": "branch-essentials-usable",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Fixed slug puranapool->puranapul and testids; hero, address, phone, hours, map, directions, services, gallery, footer all verified at 390x844."
+    }
+  ]
+}

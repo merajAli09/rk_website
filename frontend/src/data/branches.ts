@@ -13,6 +13,7 @@ export interface Branch {
   image: string;
   gallery: string[];
   features: string[];
+  instagramUrl: string;
   mapEmbedUrl: string;
   directionsUrl: string;
 }
@@ -82,6 +83,7 @@ const branchSeed = [
     orderLabel: "First Branch",
     address: ["14-1-187/C,", "Sitarampet,", "Mangalhat, Hyderabad,", "Telangana 500006"],
     phones: ["9059389888", "9346353933"],
+    instagramUrl: "https://www.instagram.com/rkfitnessmangalhat?stkn=eXVhYjJnd3UzbG0z",
     features: ["Bodybuilding zone", "Free weights", "Conditioning area", "Trainer assistance"],
   },
   {
@@ -90,6 +92,7 @@ const branchSeed = [
     orderLabel: "Second Branch",
     address: ["503, 73,", "Above Seven Heaven Hotel,", "Fish Market,", "Begum Bazar,", "Hyderabad, Telangana 500012"],
     phones: ["9133911556", "9296050027"],
+    instagramUrl: "https://www.instagram.com/rk_fitness_begumbazar?stkn=NWIydHdnMHdvaHAx",
     features: ["Multi-station racks", "Serious lifting floor", "Dedicated PT zone", "Spacious layout"],
   },
   {
@@ -98,6 +101,7 @@ const branchSeed = [
     orderLabel: "Third Branch",
     address: ["Besides Success School,", "H.No 12-1-863/1,", "Sri Damayanthi Chamber,", "Police Station Rd,", "Asif Nagar, Hyderabad,", "Telangana 500006"],
     phones: ["9133911556", "9296050027"],
+    instagramUrl: "https://www.instagram.com/rk.fitness.asifnagar?stkn=MWt5Z2k2dXhhaTdhdg==",
     ladiesOnly: {
       time: "12:00 PM – 4:00 PM",
       label: "Exclusively for ladies",
@@ -111,6 +115,7 @@ const branchSeed = [
     orderLabel: "Fourth Branch",
     address: ["13-3-389/3/B,", "X Road, Durga Nagar,", "Venkateswara Nagar,", "Puranapul, Hyderabad,", "Telangana 500006"],
     phones: ["9059389888", "9346353933"],
+    instagramUrl: "https://www.instagram.com/rkfitnesspuranapool?stkn=Z3VlN2VpazJsYWh1",
     features: ["Strength training", "Cable machines", "Fat loss conditioning", "Workout bay"],
   },
   {
@@ -119,6 +124,7 @@ const branchSeed = [
     orderLabel: "Fifth Branch",
     address: ["Beside Kabbadi Stadium,", "Markandeya Nagar, Talla Gadda,", "Guddimalkapur, Hyderabad,", "Telangana 500006"],
     phones: ["9133911556", "9296050027"],
+    instagramUrl: "https://www.instagram.com/rk_fitness_guddimalkapur?stkn=MTIyMmhzdTAybTIzcA==",
     features: ["Heavy strength zone", "Cardio floor", "Modern equipment", "Trainer assistance"],
   },
   {
@@ -127,6 +133,7 @@ const branchSeed = [
     orderLabel: "Sixth Branch",
     address: ["Ek Minar Masjid,", "Sri Balaji Enclave,", "Ghosha Mahal,", "Nampally, Hyderabad,", "Telangana 500001"],
     phones: ["9059389888", "9346353933"],
+    instagramUrl: "https://www.instagram.com/rk.fitness.nampally?stkn=amdrY2lnaG9uenAx",
     features: ["Hypertrophy suite", "Cardio equipment", "Strength floor", "Changing facilities"],
   },
 ];

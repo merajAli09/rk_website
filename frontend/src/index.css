@@ -392,6 +392,10 @@
 .detail-row a:hover { color: #8b7500; }
 .phone-list { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 9px; }
 .phone-list a { margin-top: 0; }
+.branch-instagram-detail > div > span { display: block; }
+.branch-instagram-link { display: inline-flex !important; align-items: center; gap: 8px; margin-top: 10px !important; color: #09090b !important; font-weight: 800 !important; }
+.branch-instagram-link:hover { color: #8b7500 !important; }
+.branch-instagram-link svg { width: 14px; height: 14px; }
 .ladies-only-detail { margin-top: 12px; padding: 20px 18px; border: 1px solid #c6ad00; background: #ffe500; }
 .ladies-only-detail > svg { color: #09090b; }
 .ladies-only-detail span { color: #665700; }

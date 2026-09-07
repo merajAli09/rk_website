@@ -5,6 +5,7 @@ Premium, mobile-first marketing website for RK FITNESS Hyderabad with a homepage
 
 ## Data model
 - `frontend/src/data/branches.ts` is the centralized source for ordered branch names, exact addresses, two click-to-call phone numbers per branch, photos, features, map embed URLs, and directions URLs.
+- Each branch record stores its exact supplied Instagram URL, shown in the branch details and final CTA area.
 - Standard operating hours across all locations are 6:00 AM–12:00 PM and 4:00 PM–11:00 PM.
 - Asif Nagar additionally runs a 12:00 PM–4:00 PM ladies-only session with a ladies trainer available.
 - Membership pricing is not displayed anywhere on the website.
