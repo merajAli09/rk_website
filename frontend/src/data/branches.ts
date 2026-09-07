@@ -54,9 +54,21 @@ const branchImageOverrides: Record<string, string> = {
   nampally: dumbbellRackImages[1],
 };
 
+const suppliedGalleryImages = [
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/h2av1zx4_8ed14777-0c96-4c56-97bc-51143c582cb3.JPG",
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/o8bz4dv5_3027a035-0578-4140-949c-4f9b230f7c1a.JPG",
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/8vdp3q6f_a5407e81-a54b-47c0-8de5-153d3b9b8ae8.JPG",
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/nepq286k_b76e8290-aada-43c6-9c61-7669c04670b4.JPG",
+  "https://customer-assets-lqy194kg.emergentagent.net/job_rk-strength-hub-1/artifacts/mvwiuetj_b686cd37-a1e2-462a-adf6-e2e420ef054c.JPG",
+];
+
 const branchGalleryOverrides: Record<string, string[]> = {
-  guddimalkapur: [dumbbellRackImages[0], dumbbellRackImages[2], dumbbellRackImages[3]],
-  nampally: [dumbbellRackImages[1], dumbbellRackImages[3], dumbbellRackImages[2]],
+  guddimalkapur: [suppliedGalleryImages[0], suppliedGalleryImages[3]],
+  nampally: [suppliedGalleryImages[1]],
+  "begum-bazar": [suppliedGalleryImages[2]],
+  "asif-nagar": [suppliedGalleryImages[4]],
+  mangalhat: [],
+  puranapul: [],
 };
 
 const standardTimings = ["6:00 AM – 12:00 PM", "4:00 PM – 11:00 PM"];
@@ -124,7 +136,7 @@ export const BRANCHES: Branch[] = branchSeed.map((branch, index) => {
     ...branch,
     timings: standardTimings,
     image,
-    gallery: branchGalleryOverrides[branch.slug] ?? [image, gymImages[(index + 1) % gymImages.length], gymImages[(index + 2) % gymImages.length]],
+    gallery: branchGalleryOverrides[branch.slug] ?? [],
     ...links,
   };
 });
@@ -145,7 +157,7 @@ export const SERVICES = [
   { title: "Bodybuilding", copy: "A focused environment for hypertrophy, discipline and progress.", image: gymImages[4] },
 ];
 
-export const GALLERY_IMAGES = gymImages;
+export const GALLERY_IMAGES = suppliedGalleryImages;
 
 export const TRAINER_PLACEHOLDERS = [
   { role: "Strength & conditioning", image: gymImages[1], label: "Trainer profile placeholder 01" },

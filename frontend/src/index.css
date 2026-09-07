@@ -426,8 +426,10 @@
 .branch-trainers-section { background: #121215; }
 .branch-gallery-section { background: #09090b; }
 .branch-gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 60px; }
-.branch-gallery-grid button { position: relative; height: 310px; overflow: hidden; border: 0; padding: 0; background: #121215; cursor: zoom-in; }
-.branch-gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease, filter .5s ease; }
+.branch-gallery-grid-1 { grid-template-columns: minmax(0, 720px); }
+.branch-gallery-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.branch-gallery-grid button { position: relative; height: clamp(280px, 30vw, 370px); overflow: hidden; border: 1px solid #27272a; padding: 0; background: #121215; cursor: zoom-in; }
+.branch-gallery-grid img { width: 100%; height: 100%; object-fit: contain; transition: transform .6s ease, filter .5s ease; }
 .branch-gallery-grid button:hover img { transform: scale(1.06); filter: brightness(.65); }
 .branch-gallery-grid button span { position: absolute; bottom: 16px; left: 16px; display: flex; align-items: center; gap: 7px; color: #fff; opacity: 0; font: 600 10px/1 'JetBrains Mono Variable', monospace; letter-spacing: .1em; text-transform: uppercase; }
 .branch-gallery-grid button:hover span { opacity: 1; }
@@ -510,7 +512,7 @@
   .branch-price-row { grid-template-columns: 1.2fr 1fr; gap: 10px; padding: 17px 0; }
   .branch-price-row span:nth-child(3) { display: none; }
   .branch-price-row button { grid-column: 2; justify-self: start; }
-  .branch-gallery-grid button { height: 260px; }
+  .branch-gallery-grid button { height: clamp(240px, 72vw, 330px); }
   .branch-cta-inner h2 { font-size: 56px; }
   .branch-cta-actions { flex-direction: column; align-items: stretch; margin-top: 35px; }
   .branch-cta-actions > * { justify-content: center; }

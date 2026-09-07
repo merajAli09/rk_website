@@ -1,5 +1,5 @@
-import { type FormEvent } from "react";
-import { ArrowDown, ArrowUpRight, Camera, Dumbbell, MapPin, Target, Users } from "lucide-react";
+import { useState, type FormEvent } from "react";
+import { ArrowDown, ArrowUpRight, Camera, Dumbbell, MapPin, MoveUpRight, Target, Users, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BRANCHES, GALLERY_IMAGES, SERVICES } from "@/data/branches";
@@ -21,6 +21,8 @@ const navTo = (event: FormEvent<HTMLAnchorElement>, id: string) => {
 };
 
 export default function Home() {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
   const scrollToBranches = () => {
     document.getElementById("branches")?.scrollIntoView({ behavior: "smooth" });
     window.history.replaceState(null, "", "/#branches");
@@ -47,11 +49,12 @@ export default function Home() {
 
         <section id="owner" className="owner-section section-pad" data-testid="owner-section"><div className="page-container owner-grid"><div className="owner-photo-wrap" data-testid="owner-photo-wrap"><img src={OWNER_PHOTO_URL} alt="Vikram Singh, owner of RK FITNESS" data-testid="owner-photo" /><span data-testid="owner-photo-label">Owner / RK FITNESS</span></div><div className="owner-content"><SectionIntro eyebrow="05 / About owner" title="Built from the work." /><p className="owner-name" data-testid="owner-name">Vikram Singh</p><p className="owner-career" data-testid="owner-career">Fitness career since 2005 <span>/</span> WFF India</p><div className="owner-achievements" data-testid="owner-achievements"><div data-testid="owner-achievement-2021"><span>2021</span><strong>State Champion</strong></div><div data-testid="owner-achievement-2018"><span>2018</span><strong>Mr Telangana</strong></div><div data-testid="owner-achievement-2017"><span>2017</span><strong>Mr Steel Man of Telangana</strong></div></div></div></div></section>
 
-        <section id="gallery" className="gallery-section section-pad" data-testid="gallery-section"><div className="page-container"><div className="gallery-heading"><SectionIntro eyebrow="06 / Inside RK" title="The floor is waiting." /><p data-testid="gallery-copy">Your new RK FITNESS photography will be placed here when it is ready.</p></div></div></section>
+        <section id="gallery" className="gallery-section section-pad" data-testid="gallery-section"><div className="page-container"><div className="gallery-heading"><SectionIntro eyebrow="06 / Inside RK" title="The floor is waiting." /><p data-testid="gallery-copy">Inside RK FITNESS locations across Hyderabad.</p></div><div className="gallery-grid">{GALLERY_IMAGES.map((image, index) => <button type="button" className={`gallery-tile gallery-tile-${index + 1}`} key={image} onClick={() => setLightboxImage(image)} data-testid={`gallery-image-${index + 1}`}><img src={image} alt={`RK FITNESS location ${index + 1}`} /><span>View image <MoveUpRight /></span></button>)}</div></div></section>
 
         <section className="instagram-section section-pad" data-testid="instagram-section"><div className="page-container instagram-panel"><div><p className="eyebrow" data-testid="instagram-eyebrow">07 / Follow the journey</p><h2 data-testid="instagram-heading">Train with us.<br /><span>Follow the journey.</span></h2></div><div className="instagram-copy"><Camera data-testid="instagram-icon" /><p data-testid="instagram-copy">Training floors, real work and the energy of RK FITNESS across Hyderabad.</p><a href="https://instagram.com" target="_blank" rel="noreferrer" className="yellow-button inline-button" data-testid="instagram-follow-button">Follow RK Fitness <ArrowUpRight /></a></div></div></section>
       </main>
       <Footer />
+      {lightboxImage && <div className="lightbox" role="dialog" aria-modal="true" data-testid="gallery-lightbox" onClick={() => setLightboxImage(null)}><button type="button" className="lightbox-close" onClick={() => setLightboxImage(null)} aria-label="Close gallery" data-testid="gallery-lightbox-close"><X /></button><img src={lightboxImage} alt="Expanded RK FITNESS location" onClick={(event) => event.stopPropagation()} data-testid="gallery-lightbox-image" /></div>}
     </PageShell>
   );
 }
