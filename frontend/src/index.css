@@ -178,7 +178,7 @@
 .mobile-nav { display: none; }
 
 .hero-section { min-height: 720px; display: flex; align-items: center; position: relative; overflow: hidden; background: #09090b; }
-.hero-backdrop { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,9,11,.98) 0%, rgba(9,9,11,.72) 48%, rgba(9,9,11,.25) 100%), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2200&q=88') center/cover; filter: saturate(.88); }
+.hero-backdrop { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,9,11,.98) 0%, rgba(9,9,11,.72) 48%, rgba(9,9,11,.2) 100%), url('https://images.unsplash.com/photo-1590239926079-ffde4959f91d?auto=format&fit=crop&w=2200&q=88') center/cover; filter: saturate(.88); }
 .hero-grid-lines { position: absolute; inset: 0; opacity: .22; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 80px 80px; mask-image: linear-gradient(90deg, #000, transparent 80%); }
 .hero-content { padding-top: 92px; padding-bottom: 54px; }
 .hero-eyebrow { margin-bottom: 28px; }

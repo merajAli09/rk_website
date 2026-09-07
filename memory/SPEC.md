@@ -18,6 +18,7 @@ Premium, mobile-first marketing website for RK FITNESS Hyderabad with a homepage
 - The header is fixed while scrolling and every page provides a bottom-left back-to-top control after scrolling.
 - Branch gallery images open a lightbox. Homepage gallery photography is intentionally withheld until the client supplies the replacement images.
 - Guddimalkapur and Nampally currently use separate, restrained people-free dumbbell-rack images for their cards, heroes, and equipment-only branch galleries.
+- The homepage “Build Strong. Build Different.” hero uses a people-free, medium-view dumbbell-rack photograph.
 
 ## Auth / roles
 No authentication or gated areas.
