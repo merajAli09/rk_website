@@ -5,17 +5,17 @@ Premium, mobile-first marketing website for RK FITNESS Hyderabad with a homepage
 
 ## Data model
 - `frontend/src/data/branches.ts` is the centralized source for branch names, exact addresses, demo phones, photos, features, map embed URLs, and directions URLs.
-- Membership prices are centralized in `PRICING` and match the requested values exactly.
-- Enquiry forms are prototype-only and show a success state; submissions are not persisted.
+- Membership pricing is not displayed anywhere on the website.
+- Enquiry forms and enquiry modals are not displayed anywhere on the website.
 
 ## Key flows
-- Homepage sticky navigation → section anchors → join CTA opens enquiry modal.
+- Homepage sticky navigation → section anchors → primary CTA scrolls to the six branch choices.
 - Homepage branch cards → `/branches/:slug` reusable branch template.
-- Branch pages show full address, call link, no-key Google Maps embed/share URL, directions link, photos, pricing, placeholders, and join CTA.
-- Gallery images open a lightbox.
+- Branch pages reset to the top on navigation and show full address, call link, no-key Google Maps embed/share URL, directions link, services, and photos.
+- Branch gallery images open a lightbox. Homepage gallery photography is intentionally withheld until the client supplies the replacement images.
 
 ## Auth / roles
 No authentication or gated areas.
 
 ## Content rules
-Trainer, result, and testimonial areas are editable placeholders only. Homepage branch cards show names and short descriptions only; complete addresses appear only on branch pages.
+Pricing, trainer, results/testimonial, and enquiry-form sections are intentionally omitted. Homepage branch cards show names and short descriptions only; complete addresses appear only on branch pages.

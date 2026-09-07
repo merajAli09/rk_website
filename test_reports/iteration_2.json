@@ -1,0 +1,72 @@
+{
+  "iteration": 2,
+  "passed": 8,
+  "failed": 0,
+  "flaky": 0,
+  "blocked": 0,
+  "test_error": 0,
+  "bugs": [],
+  "action_items": [
+    "No API-bearing acceptance criterion exists; backend pytest suite collected 0 tests (static marketing site, no auth/DB per seed_facts).",
+    "Old checks testing now-removed features (membership pricing, enquiry forms, trainers/results placeholders) were retired and replaced with checks matching the new acceptance matrix."
+  ],
+  "retest_needed": false,
+  "checks": [
+    {
+      "criterion": "Membership/fees content is removed from the homepage and every branch page",
+      "name": "membership-content-removed",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Homepage and /branches/gudimalkapur body text contained no ₹ symbol, no 'Choose your commitment' heading, no 'membership' text, and no Memberships nav link."
+    },
+    {
+      "criterion": "Clicking any branch from a lower homepage position opens that branch at the beginning",
+      "name": "branch-click-scrolls-top",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Clicked branch-view-nampally (last of 6 cards) from homepage; landed on /branches/nampally with branch-hero-nampally visible and window.scrollY === 0."
+    },
+    {
+      "criterion": "The Work Shows results segment is completely removed",
+      "name": "work-shows-results-removed",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Homepage body text contained no 'The Work Shows' heading, no 'testimonial', and no 'transformation' placeholder content."
+    },
+    {
+      "criterion": "Meet the Coaches and all trainer placeholders are removed everywhere",
+      "name": "coaches-trainers-removed",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Homepage and /branches/mangalhat contained no 'Meet the Coaches' heading and no trainer/coach-section|card|profile testids (legitimate 'Professional trainers' amenity copy in the Why section stat is not a trainer placeholder and was excluded)."
+    },
+    {
+      "criterion": "Enquiry forms and enquiry modals are removed everywhere",
+      "name": "enquiry-forms-removed",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "Homepage and /branches/asif-nagar rendered 0 <form> elements and 0 text/tel/textarea inputs; branch-hero-call-button href=tel:9998887772 and branch-hero-directions-button href pointed to google.com/maps."
+    },
+    {
+      "criterion": "The Floor Is Waiting section remains ready for future supplied photos but current gallery photos are removed",
+      "name": "floor-is-waiting-empty-gallery",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "gallery-section shows 'The floor is waiting.' heading and gallery-copy explanatory text, contains 0 <img> tags and 0 lightbox-testid elements."
+    },
+    {
+      "criterion": "Branch essentials remain usable after removals",
+      "name": "branch-essentials-usable",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "/branches/puranapool showed correct hero heading, full address containing 'Puranapool', phone 9998887774, '6:00 AM — 12:00 AM', visible map iframe, tel call button, Google Maps directions link, services section, >=1 branch gallery photo, and footer."
+    },
+    {
+      "criterion": "Updated navigation stays clean and mobile usable",
+      "name": "mobile-navigation-clean",
+      "lane": "browser",
+      "status": "passed",
+      "evidence": "390x844 viewport: mobile-navigation opened with exactly About/Services/Branches/Gallery links plus 'Find a branch' CTA, no membership/trainer/coach/enquiry/placeholder dead links, and no document horizontal overflow."
+    }
+  ]
+}
