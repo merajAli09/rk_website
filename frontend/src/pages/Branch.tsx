@@ -1,5 +1,5 @@
-import { useEffect, useLayoutEffect, useState } from "react";
-import { ArrowLeft, ArrowUpRight, Check, Clock3, MapPin, Phone, X } from "lucide-react";
+import { useEffect, useLayoutEffect } from "react";
+import { ArrowLeft, ArrowUpRight, Check, Clock3, MapPin, Phone } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { BRANCHES, SERVICES } from "@/data/branches";
 import { Footer, PageShell, SectionIntro, SiteHeader } from "@/components/RkComponents";
@@ -8,7 +8,6 @@ export default function Branch() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const branch = BRANCHES.find((item) => item.slug === slug);
-  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   useLayoutEffect(() => {
     const root = document.documentElement;
@@ -41,12 +40,9 @@ export default function Branch() {
 
         <section className="branch-services-section section-pad" data-testid="branch-services-section"><div className="page-container"><SectionIntro eyebrow="02 / Train here" title="Built for the work." /><div className="feature-list">{branch.features.map((feature, index) => <div className="feature-row" key={feature} data-testid={`branch-feature-${index + 1}`}><span>0{index + 1}</span><strong>{feature}</strong><Check /></div>)}</div><div className="branch-service-strip">{SERVICES.slice(0, 3).map((service, index) => <div key={service.title} data-testid={`branch-service-${index + 1}`}><img src={service.image} alt={service.title} /><span>{service.title}</span></div>)}</div></div></section>
 
-        <section className="branch-gallery-section section-pad" data-testid="branch-gallery-section"><div className="page-container"><SectionIntro eyebrow="03 / Inside the branch" title={`${branch.name}, in focus.`} /><div className="branch-gallery-grid">{branch.gallery.map((image, index) => <button type="button" key={image} onClick={() => setLightboxImage(image)} data-testid={`branch-gallery-image-${index + 1}`}><img src={image} alt={`${branch.name} gym interior ${index + 1}`} /><span>Expand <ArrowUpRight /></span></button>)}</div></div></section>
-
         <section className="branch-cta-section" data-testid="branch-cta-section"><div className="page-container branch-cta-inner"><div><p className="eyebrow">Your next session starts here</p><h2>Ready to train<br /><span>at {branch.name}?</span></h2></div><div className="branch-cta-actions">{branch.phones.map((phone, index) => <a key={phone} href={`tel:${phone}`} className="yellow-button inline-button" data-testid={`branch-call-now-button-${index + 1}`}><Phone /> {phone}</a>)}<a href={branch.directionsUrl} target="_blank" rel="noreferrer" className="outline-button" data-testid="branch-cta-directions-button">Get directions <ArrowUpRight /></a></div></div></section>
       </main>
       <Footer />
-      {lightboxImage && <div className="lightbox" role="dialog" aria-modal="true" data-testid="branch-gallery-lightbox" onClick={() => setLightboxImage(null)}><button type="button" className="lightbox-close" onClick={() => setLightboxImage(null)} aria-label="Close gallery" data-testid="branch-gallery-lightbox-close"><X /></button><img src={lightboxImage} alt={`Expanded ${branch.name} gallery`} onClick={(event) => event.stopPropagation()} /></div>}
     </PageShell>
   );
 }
