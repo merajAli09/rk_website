@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BRANCHES } from "@/data/branches";
 
-const HEADER_LOGO_URL = "/rkfitness_logo.png";
+const HEADER_LOGO_URL = "/rkfitness_logo.JPG";
 
 export function RkLogo({ footer = false }: { footer?: boolean }) {
   return (
