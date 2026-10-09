@@ -4,14 +4,23 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BRANCHES } from "@/data/branches";
 
+
 const HEADER_LOGO_URL = "/rkfitness_logo.JPG";
 
 export function RkLogo({ footer = false }: { footer?: boolean }) {
   return (
-    <Link to="/" className="rk-logo" data-testid={footer ? "footer-logo-link" : "navbar-logo-link"} aria-label="RK Fitness home">
-      {!footer && <img className="rk-logo-image" src={HEADER_LOGO_URL} alt="RK FITNESS official logo" data-testid="navbar-logo-image" />}
-      <span className="rk-logo-rk" data-testid={footer ? "footer-logo-rk" : "navbar-logo-rk"}>RK</span>
-      <span className="rk-logo-name" data-testid={footer ? "footer-logo-name" : "navbar-logo-name"}>FITNESS</span>
+    <Link
+      to="/"
+      className="rk-logo"
+      data-testid={footer ? "footer-logo-link" : "navbar-logo-link"}
+      aria-label="RK Fitness home"
+    >
+      <img
+        className="rk-logo-image"
+        src={HEADER_LOGO_URL}
+        alt="RK FITNESS official logo"
+        data-testid={footer ? "footer-logo-image" : "navbar-logo-image"}
+      />
     </Link>
   );
 }
