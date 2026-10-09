@@ -167,7 +167,11 @@
 .page-shell section[id] { scroll-margin-top: 76px; }
 .site-header-inner { width: min(1280px, calc(100% - 48px)); min-height: 76px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .rk-logo { display: inline-flex; align-items: center; gap: 8px; color: #fff; font: 900 20px/1 'Outfit Variable', sans-serif; letter-spacing: -.06em; text-decoration: none; white-space: nowrap; }
-.rk-logo-image { width: 54px; height: 48px; object-fit: contain; object-position: center; border-radius: 2px; }
+.rk-logo-image { width: 100px;
+  height: 64px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 2px;}
 .rk-logo-rk { color: #ffe500; }
 .rk-logo-name { letter-spacing: .02em; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(15px, 2vw, 27px); margin-left: auto; }
